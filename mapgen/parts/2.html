@@ -1,0 +1,14 @@
+
+        ];
+        existingStores.forEach(function f(item, index, arr) {
+          var marker = new google.maps.Marker({
+            position: item,
+            map: map,
+            title: 'Magazin existent',
+            icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
+          });
+        });
+
+        // new store
+        var marker = new google.maps.Marker({
+          position: 

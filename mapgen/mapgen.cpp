@@ -107,6 +107,8 @@ int main() {
 
 	// read input
 	string buffer;
+	// ignore first line with number of lines.
+	getline(cin, buffer);
 	while (getline(cin, buffer)) {
 			cout<<buffer<<endl;
 			opCode = stoi(buffer.substr(0, buffer.find_first_of(" \n")));

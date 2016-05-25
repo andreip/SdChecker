@@ -71,7 +71,7 @@ void generateMap(int count, vector<Coord>& stores, vector<Coord>& users, vector<
 	copyFile(part, map);
 	part.close();
 
-	map<<newStores[count]<<","<<endl;
+	map<<newStores[0]<<","<<endl;
 
 	part.open("parts/3.html");
 	copyFile(part, map);
@@ -100,7 +100,7 @@ int main() {
   ifstream newCoords;
 	newCoords.open("../newStoreCoords.txt");
 	float newLat, newLong;
-	while(newCoords>>newLat>>newLong) {
+	while(newCoords>>newLong>>newLat) {
 		newStores.push_back(Coord(newLat, newLong));
 	}
 	newCoords.close();
